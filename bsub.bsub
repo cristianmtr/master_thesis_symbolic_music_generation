@@ -1,0 +1,37 @@
+# ### General options
+# ### ?- specify queue --
+# # BSUB -q gpuv100
+# bsub -q gputitanxpascal
+# ### -- set the job Name --
+# bsub -J waveload2019
+# ### -- ask for number of cores (default: 1) --
+# bsub -n 1
+# #BSUB -gpu "num=1:mode=exclusive_process:mps=yes"
+# ### -- Select the resources: 2 gpus in exclusive process mode --
+# ###BSUB -R "rusage[ngpus_excl_p=1]"
+# bsub -R "rusage[mem=5GB]"
+# ### -- set walltime limit: hh:mm --
+# bsub -W 10:00
+# ### -- set the email address --
+# # please uncomment the following line and put in your e-mail address,
+# # if you want to receive e-mail notifications on a non-default address
+# bsub -u cristi.mtr@gmail.com
+# ### -- send notification at start --
+# #BSUB -B
+# ### -- send notification at completion--
+# #BSUB -N
+# ### -- Specify the output and error file. %J is the job-id --
+# ### -- -o and -e mean append, -oo and -eo mean overwrite --
+# bsub -o main_%J.out
+# bsub -e main_%J.err
+### -- small workaround -- no comment ;)
+#BSUB -L /bin/bash
+# -- end of LSF options --
+
+#nvidia-smi
+# Load the cuda module
+
+# here follow the commands you want to execute
+bsub -q gputitanxpascal -J waveload2019 -n 1 -R "rusage[mem=5GB]" -W 10:00 -oo main.out -e main.err /zhome/6c/8/81676/waveload2019/anaconda/bin/python main.py --new --dataset=FOLK_100k_melody folk100k_melody_bi2lstm32_noattention
+
+

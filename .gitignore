@@ -1,0 +1,34 @@
+__pycache__/
+.ipynb_checkpoints/
+.vscode/
+dataset*.npy
+models/*
+generated.mid
+x_val.npy
+generator_test_generated.mid
+old_notebooks/output.xlsx
+.mypy_cache/
+MIDI_tests/trims/
+generated.npy
+old_notebooks/test.mid
+.idea/
+chorus_key_transposed.mid
+opt.npy
+midi_seeds_transposed/
+test.mid
+*.out
+*.err
+model_*/
+ex1_scores.png
+scripts/attention.png
+scripts/softmax_attention.png
+scripts/softmax_noattention.png
+softmax.png
+softmax_attention.png
+user_distributions.png
+user_study_results.png
+*.~lock.*
+user_study_results2 - Copy.png
+user_study_results2.png
+user_study_results - Copy.png
+user_study_results.png
