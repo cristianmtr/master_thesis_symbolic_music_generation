@@ -25,6 +25,12 @@ matplotlib
 numpy
 ```
 
+### Pretrained models
+
+Can be found in [here](https://drive.google.com/drive/folders/1g2iZCqmaUMVIpJa7X3zqXrKnBr4p4hod?usp=sharing).
+
+Follow the instruction in [sampling](#sampling) to generate samples, based on your own input.
+
 ### PREPROCESSING A DATASET
 
 **NOTE:** There is a small subset of the folk dataset available here, in the `folkdataset_small` folder.
